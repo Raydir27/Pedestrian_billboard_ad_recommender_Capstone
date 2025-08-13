@@ -4,7 +4,7 @@ import csv
 import os
 
 model_ped = YOLO("../Models/computer_vision_models/pedestrian_detect_model_v8n_24_jul.pt")
-model_apparel = YOLO("../Models/computer_vision_models/apparel_v8n_model_5_aug")
+model_apparel = YOLO("../Models/computer_vision_models/apparel2_v8n_model_13_aug_2025.pt")
 #age_gender_predicter model
 model_age_gend = YOLO("../Models/computer_vision_models/age_gender_model.pt")
 
@@ -113,3 +113,4 @@ def log_detections_to_csv(detections, csv_filepath, frame_id=0):
             # Log apparel and age/gender detections
             process_results(data['apparel_results'], 'apparel')
             process_results(data['age_gender_results'], 'age_gender')
+
