@@ -43,13 +43,13 @@ Our system makes billboard content **adaptive**:
 
 ### **2. Multi-Model Object Detection**
 - Ensemble vision pipeline:
-  - **YOLOv8**: High-speed detection of people, vehicles, and general objects
+  - **YOLOv8**: High-speed detection of pedestrians and their demographics
 - Runs in **real-time** with GPU acceleration
 
 ### **3. Data Aggregation**
 - Combines raw detections into:
   - Pedestrian counts
-  - Vehicular traffic density
+  - Pedestrian demographics(age, gender)
   - Time-of-day metadata
 
 ### **4. Downstream ML Model**
