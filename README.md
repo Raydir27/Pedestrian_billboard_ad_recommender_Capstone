@@ -80,5 +80,5 @@ Our system makes billboard content **adaptive**:
 
 ### **1. Clone the repository**
 ```bash
-git clone https://github.com/yourusername/digital-billboard-ad-system.git
-cd digital-billboard-ad-system
+git clone https://github.com/Raydir27/Pedestrian_billboard_ad_recommender_Capstone.git
+cd Pedestrian_billboard_ad_recommender_Capstone
