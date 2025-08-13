@@ -5,7 +5,8 @@ import os
 import cv2
 import numpy as np
 import datetime
-from Code.models_infer import pedestrian_crop, detect_pedestrian, log_detections_to_csv
+# from Code.models_infer import pedestrian_crop, detect_pedestrian, log_detections_to_csv
+from models_infer import pedestrian_crop, detect_pedestrian, log_detections_to_csv
 
 # Placeholder for object detection models
 # Example: from object_detection_models.model1 import detect_objects
@@ -86,3 +87,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
