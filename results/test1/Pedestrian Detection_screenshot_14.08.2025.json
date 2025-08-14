@@ -1,0 +1,59 @@
+
+0: 448x640 14 Pedestrians, 129.2ms
+Speed: 21.4ms preprocess, 129.2ms inference, 204.7ms postprocess per image at shape (1, 3, 448, 640)
+
+0: 640x288 1 pant, 128.2ms
+Speed: 2.5ms preprocess, 128.2ms inference, 77.5ms postprocess per image at shape (1, 3, 640, 288)
+
+0: 640x224 1 Tshirt, 1 pant, 109.3ms
+Speed: 3.7ms preprocess, 109.3ms inference, 2.9ms postprocess per image at shape (1, 3, 640, 224)
+
+0: 640x224 1 skirt, 10.4ms
+Speed: 2.2ms preprocess, 10.4ms inference, 3.4ms postprocess per image at shape (1, 3, 640, 224)
+
+0: 640x192 (no detections), 108.9ms
+Speed: 1.9ms preprocess, 108.9ms inference, 2.4ms postprocess per image at shape (1, 3, 640, 192)
+
+0: 640x192 (no detections), 26.5ms
+Speed: 1.9ms preprocess, 26.5ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 192)
+
+0: 640x192 2 shirts, 1 skirt, 17.4ms
+Speed: 2.1ms preprocess, 17.4ms inference, 2.6ms postprocess per image at shape (1, 3, 640, 192)
+
+0: 640x224 (no detections), 12.5ms
+Speed: 1.6ms preprocess, 12.5ms inference, 1.5ms postprocess per image at shape (1, 3, 640, 224)
+
+0: 640x224 1 Tshirt, 12.7ms
+Speed: 1.9ms preprocess, 12.7ms inference, 1.9ms postprocess per image at shape (1, 3, 640, 224)
+
+0: 640x256 (no detections), 91.6ms
+Speed: 1.3ms preprocess, 91.6ms inference, 3.1ms postprocess per image at shape (1, 3, 640, 256)
+
+0: 640x160 (no detections), 126.1ms
+Speed: 2.4ms preprocess, 126.1ms inference, 1.8ms postprocess per image at shape (1, 3, 640, 160)
+
+0: 640x192 (no detections), 20.3ms
+Speed: 1.4ms preprocess, 20.3ms inference, 2.6ms postprocess per image at shape (1, 3, 640, 192)
+
+0: 640x256 (no detections), 22.9ms
+Speed: 4.4ms preprocess, 22.9ms inference, 1.8ms postprocess per image at shape (1, 3, 640, 256)
+
+0: 640x96 1 Tshirt, 1 suit, 115.5ms
+Speed: 1.5ms preprocess, 115.5ms inference, 4.0ms postprocess per image at shape (1, 3, 640, 96)
+
+0: 640x256 (no detections), 24.8ms
+Speed: 1.7ms preprocess, 24.8ms inference, 1.9ms postprocess per image at shape (1, 3, 640, 256)
+
+Detected Apparel per Pedestrian:
+
+ Pedestrian ID Apparel  Confidence
+             0    pant       0.747
+             1    pant       0.384
+             1  Tshirt       0.301
+             2   skirt       0.657
+             5   skirt       0.566
+             5   shirt       0.381
+             5   shirt       0.289
+             7  Tshirt       0.339
+            12    suit       0.488
+            12  Tshirt       0.255
