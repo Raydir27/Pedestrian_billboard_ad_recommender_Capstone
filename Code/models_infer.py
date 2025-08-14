@@ -113,4 +113,3 @@ def log_detections_to_csv(detections, csv_filepath, frame_id=0):
             # Log apparel and age/gender detections
             process_results(data['apparel_results'], 'apparel')
             process_results(data['age_gender_results'], 'age_gender')
-
