@@ -1,0 +1,31 @@
+pedestrian_id,rank,ad_topic,confidence
+0,1,Health Products,0.0823
+0,2,Finance/Investing,0.0684
+0,3,Beauty & Skincare,0.0683
+0,4,Education & Careers,0.0671
+0,5,Footwear(shoes),0.0653
+1,1,Sports/Fitness,0.0839
+1,2,Jewelry,0.0705
+1,3,Electronics,0.0697
+1,4,Automobiles,0.0665
+1,5,Social & Dating Apps,0.0585
+2,1,Sports/Fitness,0.0839
+2,2,Jewelry,0.0705
+2,3,Electronics,0.0697
+2,4,Automobiles,0.0665
+2,5,Social & Dating Apps,0.0585
+5,1,Sports/Fitness,0.0839
+5,2,Jewelry,0.0705
+5,3,Electronics,0.0697
+5,4,Automobiles,0.0665
+5,5,Social & Dating Apps,0.0585
+7,1,Sports/Fitness,0.0839
+7,2,Jewelry,0.0705
+7,3,Electronics,0.0697
+7,4,Automobiles,0.0665
+7,5,Social & Dating Apps,0.0585
+12,1,Sports/Fitness,0.0839
+12,2,Jewelry,0.0705
+12,3,Electronics,0.0697
+12,4,Automobiles,0.0665
+12,5,Social & Dating Apps,0.0585
