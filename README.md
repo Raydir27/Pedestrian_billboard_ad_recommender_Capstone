@@ -1,7 +1,7 @@
 # 🖥️ Pedestrian based Digital Billboard Ad Recommendation System
 
 An **intelligent, real-time advertising platform** that transforms static billboards into **dynamic, context-aware displays**.  
-By combining **computer vision** and **machine learning**, the system adapts ads in real-time based on live environmental and audience data—maximizing **engagement** and **ROI**.
+By combining **computer vision** and **machine learning**, the system adapts ads in real-time based on live audience data(such as age, gender, clothing, accessories)—maximizing **engagement** and **ROI**.
 
 ---
 
