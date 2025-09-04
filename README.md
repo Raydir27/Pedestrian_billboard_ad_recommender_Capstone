@@ -1,84 +1,106 @@
-# 🖥️ Pedestrian based Digital Billboard Ad Recommendation System
+# 🖥️ Vis-Ad: Real-Time Targeted Advertisements using Billboard
 
-An **intelligent, real-time advertising platform** that transforms static billboards into **dynamic, context-aware displays**.  
-By combining **computer vision** and **machine learning**, the system adapts ads in real-time based on live audience data(such as age, gender, clothing, accessories)—maximizing **engagement** and **ROI**.
+An **intelligent, real-time advertising system** that transforms static billboards into **dynamic, context-aware displays**. By combining **computer vision** and **machine learning**, the system adapts ads in real-time based on live audience data—such as age, gender, clothing style, and accessories, maximising **engagement** and **ROI**.
 
----
+-----
 
 ## 🚀 Overview
 
-The **Digital Billboard Ad Recommendation System** analyzes a live camera feed near a billboard, detects audience and traffic patterns, and recommends ad categories tailored to the current context.
+The **Vis-Ad system** analyses a live camera feed near a billboard, detects audience demographics and apparel features, and recommends ad categories tailored to the current frame/feed context.
 
 Example scenario:
-- **Morning rush hour** → Coffee shop promotions
-- **Afternoon weekends** → Family-friendly retail ads
-- **Evening weekdays** → Restaurants and entertainment
+
+  - **Morning rush hour** → Coffee shop promotions
+  - **Afternoon weekends** → Family-friendly retail ads
+  - **Evening weekdays** → Restaurants and entertainment
 
 This repository contains the **core pipeline** to bring that vision to life.
 
----
+-----
 
 ## 💡 Motivation
 
-Traditional digital billboards often:
-- Use **static schedules**
-- Rely on **broad demographic assumptions**
-- Ignore **real-time environmental context**
+Traditional billboards often:
 
-**Problem:**  
-A fixed ad rotation at 8 AM Monday is the same as 8 PM Sunday, missing engagement opportunities.
+  - Use **static schedules** 
+  - Rely on **broad demographic assumptions**
+  - Ignore **real-time environmental context** 
 
-**Solution:**  
-Our system makes billboard content **adaptive**:
-- Analyzes **audience type**, **traffic density**, and **time-of-day**
-- Dynamically selects the most relevant ad categories
-- Enables **data-driven campaigns** that evolve with the environment
+**Problem:** A fixed ad rotation at 8 AM Monday is the same as 8 PM Sunday, leading to irrelevant impressions and wasted ad spending[cite: 575].
 
----
+**Solution:** Our system makes billboard content **adaptive**:
+
+  - Analyzes **audience type**, **traffic density**, and **time-of-day**
+  - Dynamically selects the most relevant ad categories 
+  - Enables **data-driven campaigns** that evolve with the environment
+
+This approach bridges the gap between the digital precision of online advertising and the broad visibility of physical billboards.
+
+-----
 
 ## 🧠 System Architecture
 
-### **1. Video Ingestion**
-- Accepts a **live RTSP/HTTP video stream** from a camera near the billboard
+The Vis-Ad system follows a modular pipeline with four primary stages:
 
-### **2. Multi-Model Object Detection**
-- Ensemble vision pipeline:
-  - **YOLOv8**: High-speed detection of pedestrians and their demographics
-- Runs in **real-time** with GPU acceleration
+### **1. Input Acquisition**
 
-### **3. Data Aggregation**
-- Combines raw detections into:
-  - Pedestrian counts
-  - Pedestrian demographics(age, gender)
-  - Time-of-day metadata
+  - Accepts a **live HD video stream** (720p–1080p, 15–30 FPS) from a camera near the billboard.
+  - Frames are sampled at intervals to balance accuracy with computational efficiency.
 
-### **4. Downstream ML Model**
-- Input: Aggregated environmental features
-- Output: **Predicted ad category rankings**
-- Example:  
-  `["Coffee & Beverages", "Retail", "Dining & Entertainment"]`
+### **2. Preprocessing**
 
-### **5. Ad Recommendation**
-- Produces a **ranked list** of recommended ad categories
-- API-ready output for billboard content switching
+  - Detected persons are cropped into regions of interest (ROI) to focus on relevant visual cues.
 
----
+### **3. Feature Extraction**
+
+  - **Demographic analysis**: Estimates age group and gender using trained convolutional neural networks (CNNs).
+  - **Apparel recognition**: Identifies clothing styles (e.g., t-shirts, suits, pants) and detects accessories like spectacles or purses using a multi-label CNN/YOLO-based approach.
+
+### **4. Ad Recommendation Module**
+
+  - A machine learning recommender system maps the extracted feature vectors (demographics + apparel/accessories) to suitable ad categories.
+  - The most relevant advertisement is then displayed to the audience in real time.
+
+-----
 
 ## 📦 Tech Stack
 
-| Component                  | Technology |
-|----------------------------|------------|
-| Object Detection           | YOLOv8     |
-| Data Processing & Pipeline | Python, OpenCV, Pandas |
-| ML Classifier              | Scikit-learn / LightGBM |
-| Deployment                 | FastAPI, Docker |
-| Streaming                  | RTSP, FFmpeg |
+| Component | Technology |
+|---|---|
+| Programming Language | Python |
+| Computer Vision | OpenCV |
+| Deep Learning | TensorFlow, PyTorch |
+| Object Detection | YOLOv8n |
+| Deployment | FastAPI, Docker |
+| Streaming | RTSP, FFmpeg |
 
----
+-----
 
 ## 🛠️ Installation
 
+**Note:** The following is a placeholder for the installation process.
+
 ### **1. Clone the repository**
+
 ```bash
 git clone https://github.com/Raydir27/Pedestrian_billboard_ad_recommender_Capstone.git
 cd Pedestrian_billboard_ad_recommender_Capstone
+```
+
+### **2. Set up the environment**
+
+```bash
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### **3. Run the system**
+
+```bash
+# Run the FastAPI application
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
