@@ -1,6 +1,8 @@
+-----
+
 # 🖥️ Vis-Ad: Real-Time Targeted Advertisements using Billboard
 
-An **intelligent, real-time advertising system** that transforms static billboards into **dynamic, context-aware displays**. By combining **computer vision** and **machine learning**, the system adapts ads in real-time based on live audience data—such as age, gender, clothing style, and accessories, maximising **engagement** and **ROI**.
+An **intelligent, real-time advertising system** that transforms static billboards into **dynamic, context-aware displays**. By combining **computer vision** and **machine learning**, the system adapts ads in real-time based on live audience data—such as age, gender, clothing style, and accessories—maximising **engagement** and **ROI**.
 
 -----
 
@@ -10,9 +12,11 @@ The **Vis-Ad system** analyses a live camera feed near a billboard, detects audi
 
 Example scenario:
 
-  - **Morning rush hour** → Coffee shop promotions
-  - **Afternoon weekends** → Family-friendly retail ads
-  - **Evening weekdays** → Restaurants and entertainment
+  - **Pedestrian 1:** A young woman (20s) in formal business attire (suit) with a briefcase.
+      - **Top 5 Ad Categories:** `["Luxury Watches", "Professional Services", "High-end Dining", "Business Travel", "Financial Planning"]`
+  - **Pedestrian 2:** A man (50s) in casual sportswear (t-shirt and track pants) with a water bottle.
+      - **Top 5 Ad Categories:** `["Fitness & Health", "Sports Gear", "Casual Dining", "Beverages", "Outdoor Recreation"]`
+  - **System Recommendation:** The system calculates a weighted average of all detected ad categories for the entire crowd and displays the ad with the highest combined score, ensuring the content is relevant to the whole audience.
 
 This repository contains the **core pipeline** to bring that vision to life.
 
@@ -22,16 +26,16 @@ This repository contains the **core pipeline** to bring that vision to life.
 
 Traditional billboards often:
 
-  - Use **static schedules** 
+  - Use **static schedules**
   - Rely on **broad demographic assumptions**
-  - Ignore **real-time environmental context** 
+  - Ignore **real-time environmental context**
 
-**Problem:** A fixed ad rotation at 8 AM Monday is the same as 8 PM Sunday, leading to irrelevant impressions and wasted ad spending[cite: 575].
+**Problem:** A fixed ad rotation at 8 AM Monday is the same as 8 PM Sunday, leading to irrelevant impressions and wasted ad spending.
 
 **Solution:** Our system makes billboard content **adaptive**:
 
   - Analyzes **audience type**, **traffic density**, and **time-of-day**
-  - Dynamically selects the most relevant ad categories 
+  - Dynamically selects the most relevant ad categories
   - Enables **data-driven campaigns** that evolve with the environment
 
 This approach bridges the gap between the digital precision of online advertising and the broad visibility of physical billboards.
@@ -70,7 +74,7 @@ The Vis-Ad system follows a modular pipeline with four primary stages:
 | Programming Language | Python |
 | Computer Vision | OpenCV |
 | Deep Learning | TensorFlow, PyTorch |
-| Object Detection | YOLOv8n |
+| Object Detection | YOLOv8 |
 | Deployment | FastAPI, Docker |
 | Streaming | RTSP, FFmpeg |
 
